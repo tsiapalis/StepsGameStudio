@@ -20,7 +20,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    min-width: 600px;
+    min-width: 350px;
     background-image: var(--bg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ main {
 #about-info, #contact-info {
     width: 75%;
 }
-p {
+p, #contact-mail {
     font-size: medium;
     text-align: justify;
 }
@@ -48,13 +48,9 @@ p {
 /* Header section */
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: flex-end;
-    height: auto;
     width: 100%;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--darkpurple_alpha);
     background-blend-mode: darken;
     padding-top: calc(var(--paddingvalue)/4);
@@ -62,7 +58,7 @@ header {
 }
 
 #header-title {
-    width: 12%;
+    width: 10%;
     text-align: left;
     padding-left: 10px;
     height: 100%;
@@ -73,8 +69,9 @@ header {
 #header-info {
     display: flex;
     justify-content: center;
-    width: 32%;
+    width: 90%;
     height: 100%;
+    padding: 0 calc(var(--paddingvalue)/2) 0 ;
 }
 #header-message {
     height: 100%;
@@ -110,20 +107,6 @@ header {
 #intro {
     justify-content: center;
     text-align: left;
-
-}
-
-
-#intro {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: var(--paddingvalue);
-    padding-bottom: var(--paddingvalue);
 }
 #intro-head {
     width: 10%;
@@ -144,31 +127,21 @@ header {
     text-align: center;
     line-height: 1.4;
     padding: var(--paddingvalue) 200px 0 200px;
-    border-left: solid 1px var(--lightpurple);
 }
 #intro-info p {
     text-align: center;
     line-height: 1.4;
     padding: 0 200px var(--paddingvalue) 200px;
-    border-left: solid 1px var(--lightpurple);
 }
 
 /* projects section */
 #projects {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     text-align: center;
-    height: auto;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--darkpurple_alpha);
     background-blend-mode: darken;
 }
 #projects-head {
     width: 10%;
-    height: 100%;
     padding-top: var(--paddingvalue);
     padding-bottom: var(--paddingvalue);
 }
@@ -184,29 +157,16 @@ header {
     padding-top: var(--paddingvalue);
     padding-bottom: var(--paddingvalue);
 }
-#valeath {
-    border-left: solid 1px var(--lightpurple);
-}
-
-#valeath, #valeath-idle, #valeath-stories {
-    width: calc(33% - 10px); /* Adjust the width based on the number of items */
-}
 #valeath, #valeath-idle, #valeath-stories {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     justify-content: space-between; /* Align items evenly vertically */
 }
 #valeath div, #valeath-idle div, #valeath-stories div {
     width: 100%;
 }
-#valeath, #valeath-idle, #valeath-stories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(33% - 10px); /* Adjust the width based on the number of items */
-    /* Add margin to create spacing between items */
-}
+
 #valeath h3, #valeath-idle h3, #valeath-stories h3 {
     max-width: 100%;
     padding-bottom: var(--paddingvalue);
@@ -229,20 +189,8 @@ header {
 }
 
 /* About section */
-#about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: var(--paddingvalue);
-    padding-bottom: var(--paddingvalue);
-}
 #about-head {
     width: 10%;
-    height: 100%;
     padding-top: var(--paddingvalue);
     padding-bottom: var(--paddingvalue);
 }
@@ -255,59 +203,40 @@ header {
     width: 90%;
     height: auto;
 }
-#about-info p {
+#about-info-text {
     text-align: center;
     line-height: 1.4;
-    padding: var(--paddingvalue) 200px var(--paddingvalue) 200px;
-    border-left: solid 1px var(--lightpurple);
-}
-/* Contact section */
-#contact {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--darkpurple_alpha);
-    background-blend-mode: darken;
-    padding-top: var(--paddingvalue);
-    padding-bottom: var(--paddingvalue);
-    height: auto;
+    padding: var(--paddingvalue) 100px var(--paddingvalue) 100px;
 }
 
+/* Contact section */
+#contact {
+    background-color: var(--darkpurple_alpha);
+    background-blend-mode: darken;
+}
 #contact-head {
     width: 10%;
     height: 100%;
     padding-top: var(--paddingvalue);
     padding-bottom: var(--paddingvalue);
 }
-
 #contact-head h1 {
     text-align: left;
     font-size: 1.2em;
     padding-left: var(--paddingvalue);
     color: azure;
 }
-
 #contact-info {
     width: 90%;
     height: auto;
 }
-
-#contact-info p {
+#contact-mail {
     text-align: center;
-    padding: var(--paddingvalue) 200px var(--paddingvalue) 200px;
-    border-left: solid 1px var(--lightpurple);
+    padding: var(--paddingvalue) 200px var(--paddingvalue) 200px; 
     color: azure;
 }
-
 /* Footer Section */
 footer {
-    height: auto;
-    background-image: var(--bg);
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--darkpurple_alpha);
     background-blend-mode: overlay;
 }
@@ -315,9 +244,22 @@ footer p {
     text-align: right;
     font-size: smaller;
     padding: calc( var(--paddingvalue) / 4)
-
 }
-
+/* Common Rules */
+#intro, #about, #projects, #contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    background-image: var(--bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: var(--paddingvalue);
+    padding-bottom: var(--paddingvalue);
+}
+#contact-head, #intro-head, #projects-head, #about-head {
+    height: 100%;
+}
 h1, #contact-head h1, #intro-head h1, #projects-head h1, #about-head h1 {
     padding-left: 30px;
     padding-right: 10px;
@@ -330,15 +272,54 @@ h1, #contact-head h1, #intro-head h1, #projects-head h1, #about-head h1 {
     padding-bottom: 75px;
 }
 
-
-@media (max-width: 1260) {
-    h1, #contact-head h1, #intro-head h1, #projects-head h1, #about-head h1 {
-        font-size: 0.5em;
-    }
-  }
-
-@media (max-width: 1360px) {
+@media (max-width: 1500px) {
     h1, #contact-head h1, #intro-head h1, #projects-head h1, #about-head h1 {
         font-size: 1em;
     }
   }
+@media (max-width: 1250px) {
+    h1, .nav-link, #game-studio, #contact-head h1, #intro-head h1, #intro-head p, #projects-head h1, #about-head h1, 
+    #valeath-info, #valeath-idle-info, #valeath-stories-info, #about-info-text,
+    #valeath-release, #valeath-idle-release, #valeath-stories-release, #contact-mail {
+        font-size: 0.8em;
+    }
+    #projects, #about, #contact, #intro {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #header-head #intro-head, #projects-head, #about-head, #contact-head  {
+        width: 20%;
+        padding: 8px;
+    }
+    #header-info #intro-info, #projects-info, #about-info, #contact-info {
+        width: 80%;
+        padding: 8px;
+    }
+    #about-info-text{
+        padding: 8px;
+    }
+  }
+@media screen and (max-width: 760px) {
+    #projects-info {
+      flex-direction: column;
+      align-items: center;
+      padding: auto;
+    }
+    #valeath, #valeath-idle, #valeath-stories {
+        width: 100%; 
+    }
+    #valeath-info, #valeath-idle-info, #valeath-stories-info {
+        width: 100%; 
+    }
+    #about-info-text{
+        padding: 8px;
+    }
+    #header-info #intro-info, #projects-info, #about-info, #contact-info, #contact-mail {
+        width: 70%;
+        padding: 8px;
+    }
+    #header-head #intro-head, #projects-head, #about-head, #contact-head {
+        width: 30%;
+        padding: 8px;
+    }
+}
