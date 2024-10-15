@@ -1,2 +1,2 @@
 # StepsGameStudio
-Landing Page from my indie game studio
+Landing Page for my indie game studio
